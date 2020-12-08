@@ -1,0 +1,128 @@
+2020-12-04 11:31:37,797 WARN  [SoapUI] Missing folder [C:\apache-maven-3.6.3-bin\apache-maven-3.6.3\SDETBatch1-SoapProject-soapui-project\ext] for external libraries
+2020-12-04 11:31:38,659 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\user\soapui-settings.xml]
+2020-12-04 11:31:43,502 INFO  [WsdlProject] Loaded project from [file:/C:/apache-maven-3.6.3-bin/apache-maven-3.6.3/SDETBatch1-SoapProject-soapui-project/SDETBatch1-SoapProject-soapui-project.xml]
+2020-12-04 11:31:45,087 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [SDETBatch1_SoapProject]
+2020-12-04 11:31:45,092 INFO  [SoapUITestCaseRunner] Running Project [SDETBatch1_SoapProject], runType = SEQUENTIAL
+2020-12-04 11:31:45,168 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [TestCase 1]
+2020-12-04 11:31:45,242 INFO  [SoapUITestCaseRunner] running step [Groovy Script]
+2020-12-04 11:31:46,525 INFO  [log] Testcase name is TestCase 1
+2020-12-04 11:31:46,546 INFO  [log] TestSuite name is SalesOrderRepository_TS
+2020-12-04 11:31:46,715 INFO  [log] Request is <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=salesOrderRepositoryV1">
+   <soap:Header/>
+   <soap:Body>
+      <def:salesOrderRepositoryV1SaveRequest>
+         <entity>
+<!--enter valid customer email-->                        
+<customerEmail>Testhr@gmail.com</customerEmail>
+<items>
+        <item>
+            <!--enter valid product SKU-->
+                <sku>SK012006</sku>
+                <qtyOrdered>6</qtyOrdered>
+                <price>240</price>
+        </item>
+</items>
+<payment>
+    <!--default value checkmo-->
+        <method>checkmo</method>
+</payment>
+         
+         </entity>
+      </def:salesOrderRepositoryV1SaveRequest>
+   </soap:Body>
+</soap:Envelope>
+2020-12-04 11:31:46,750 INFO  [log] Email is Testhr@gmail.com
+2020-12-04 11:31:46,751 INFO  [log] SKU is SK012006
+2020-12-04 11:31:46,752 INFO  [log] qty 6
+2020-12-04 11:31:46,752 INFO  [log] price240
+2020-12-04 11:31:47,559 INFO  [log] Updated Xml is <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=salesOrderRepositoryV1">
+   <soap:Header/>
+   <soap:Body>
+      <def:salesOrderRepositoryV1SaveRequest>
+         <entity>
+<!--enter valid customer email-->                        
+<customerEmail>Testhr@gmail.com</customerEmail>
+<items>
+        <item>
+            <!--enter valid product SKU-->
+                <sku>SK012006</sku>
+                <qtyOrdered>6</qtyOrdered>
+                <price>240</price>
+        </item>
+</items>
+<payment>
+    <!--default value checkmo-->
+        <method>checkmo</method>
+</payment>
+         
+         </entity>
+      </def:salesOrderRepositoryV1SaveRequest>
+   </soap:Body>
+</soap:Envelope>
+2020-12-04 11:32:06,308 INFO  [log] HTTP status code: 200
+2020-12-04 11:32:06,309 INFO  [log] [HTTP/1.1 200 OK]
+2020-12-04 11:32:06,346 INFO  [log] Response is <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:ns1="http://soap.upskills.in/soap/default?services=salesOrderRepositoryV1">
+   <env:Body>
+      <ns1:salesOrderRepositoryV1SaveResponse>
+         <result>
+            <baseGrandTotal/>
+            <baseTotalDue>0</baseTotalDue>
+            <createdAt>2020-12-04 06:01:54</createdAt>
+            <customerEmail>Testhr@gmail.com</customerEmail>
+            <entityId>1702</entityId>
+            <grandTotal/>
+            <incrementId>000001706</incrementId>
+            <protectCode>7f2c6eda358683e5ad4a98e207c6df78</protectCode>
+            <storeName>Main Website
+Main Website Store
+Default Store View</storeName>
+            <totalDue>0</totalDue>
+            <totalItemCount>1</totalItemCount>
+            <updatedAt>2020-12-04 06:01:54</updatedAt>
+            <items>
+               <item>
+                  <baseRowTotal>0</baseRowTotal>
+                  <baseRowTotalInclTax>0</baseRowTotalInclTax>
+                  <createdAt>2020-12-04 06:01:54</createdAt>
+                  <itemId>1669</itemId>
+                  <orderId>1702</orderId>
+                  <originalPrice>240</originalPrice>
+                  <price>240</price>
+                  <qtyOrdered>6</qtyOrdered>
+                  <rowTotal>0</rowTotal>
+                  <rowTotalInclTax>0</rowTotalInclTax>
+                  <sku>SK012006</sku>
+                  <updatedAt>2020-12-04 06:01:54</updatedAt>
+               </item>
+            </items>
+            <payment>
+               <accountStatus/>
+               <additionalInformation/>
+               <ccLast4/>
+               <entityId>1702</entityId>
+               <method>checkmo</method>
+               <parentId>1702</parentId>
+            </payment>
+            <statusHistories/>
+         </result>
+      </ns1:salesOrderRepositoryV1SaveResponse>
+   </env:Body>
+</env:Envelope>
+2020-12-04 11:32:06,378 INFO  [log] orderID is 1702
+2020-12-04 11:32:06,438 INFO  [SoapUITestCaseRunner] running step [SaveRequest]
+2020-12-04 11:32:08,304 INFO  [log] HTTP status code: 200
+2020-12-04 11:32:08,305 INFO  [log] [HTTP/1.1 200 OK]
+2020-12-04 11:32:08,307 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2020-12-04 11:32:08,307 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2020-12-04 11:32:08,308 INFO  [SoapUITestCaseRunner] running step [OrderId]
+2020-12-04 11:32:08,317 INFO  [SoapUITestCaseRunner] running step [GetRequest]
+2020-12-04 11:32:09,478 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2020-12-04 11:32:09,492 INFO  [SoapUITestCaseRunner] running step [GetAllList]
+2020-12-04 11:34:59,139 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2020-12-04 11:34:59,140 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status UNKNOWN
+2020-12-04 11:34:59,141 INFO  [SoapUITestCaseRunner] running step [GetStatus]
+2020-12-04 11:35:01,300 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2020-12-04 11:35:01,301 INFO  [SoapUITestCaseRunner] running step [CancelStatus]
+2020-12-04 11:35:02,659 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2020-12-04 11:35:02,661 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [TestCase 1], time taken: 197329ms, status: FINISHED
+2020-12-04 11:35:02,672 INFO  [SoapUITestCaseRunner] Project [SDETBatch1_SoapProject] finished with status [FINISHED] in 197565ms
